@@ -1,0 +1,142 @@
+
+.error_color {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    flex-grow: 1;
+    height: 100%;
+    color: #fff;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    outline: solid 1px #37393d;
+}
+
+.success_color {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    flex-grow: 1;
+    height: 100%;
+    color: #fff;
+    background-color: forestgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    outline: solid 1px #37393d;
+}
+
+.drag_word {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    flex-grow: 1;
+    height: 100%;
+    color: #fff;
+    background-color: #37393d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.drag_word:not(:first-child):before,
+.error_color:not(:first-child):before,
+.success_color:not(:first-child):before  {
+    position: absolute;
+    left: -10px;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    content: "";
+    border-radius: 40%;
+    background-color: antiquewhite;
+}
+
+.drag_word:not(:last-child):after,
+.error_color:not(:last-child):after,
+.success_color:not(:last-child):after  {
+    position: absolute;
+    right: -10px;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    content: "";
+    border-radius: 40%;
+}
+
+.drag_word:not(:last-child):after {
+    background-color: #37393d;
+}
+
+.error_color:not(:last-child):after {
+    background-color: red;
+}
+
+.success_color:not(:last-child):after {
+    background-color: forestgreen;
+}
+
+.drag_word+.drag_word{
+    margin-left: 6px;
+}
+
+.success_color+.success_color {
+    margin-left: 6px;
+}
+
+.error_color+.error_color {
+    margin-left: 6px;
+}
+
+.success_color+.error_color {
+    margin-left: 6px;
+}
+
+.error_color+.success_color {
+    margin-left: 6px;
+}
+
+@media screen and (max-width: 940px) {
+    .error_color,
+    .success_color,
+    .drag_word  {
+        font-size: 12px;
+    }
+    .error_color>span,
+    .success_color>span,
+    .drag_word>span  {
+        z-index: 10;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .error_color,
+    .success_color,
+    .drag_word  {
+        font-size: 8px;
+    }
+    .error_color>span,
+    .success_color>span,
+    .drag_word>span  {
+        margin-left: 8px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .error_color,
+    .success_color,
+    .drag_word  {
+        font-size: 7px;
+    }
+    .error_color>span,
+    .success_color>span,
+    .drag_word>span  {
+        margin-left: 5px;
+    }
+
+}

@@ -1,0 +1,327 @@
+.background {
+    background: url(../assets/bg.jpg) 0% 0% / cover no-repeat;
+    opacity: 0.5;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+	align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+.mainBase {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+}
+
+.menu_wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 100%;
+    height: 60px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+.menu_settings {
+    display: flex;
+}
+
+.chose_btn {
+    font-size: 16px;
+    color: #09d3ac;
+    width: 70px;
+    background-color:  #37393d;
+    transition: 0.3s;
+}
+
+.choose_level {
+    width: 55px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #09d3ac;
+    cursor: pointer;
+    color: #fff;
+    background-color: #37393d;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    padding-left: 5px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.choose_level:hover,
+.chose_btn:hover,
+.setting_button:hover,
+.game_speaker:hover,
+.game_button:hover {
+    transform: scale(1.2);
+}
+
+.setting_button {
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.game_button {
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 10px;
+    transition: 0.3s;
+    background-color: #fff;
+    padding: 0 5px;
+}
+
+.megafon_btn {
+    width: 50px;
+    background-image: url(../assets/megaphone.svg);
+}
+
+.non_active_btn {
+    background-color: red;
+}
+
+.translate_btn {
+    width: 50px;
+    background-image: url(../assets/text.svg);
+}
+
+.song_btn {
+    width: 50px;
+    background-image: url(../assets/music.svg);
+}
+
+.image_btn {
+    width: 50px;
+    background-image: url(../assets/photo.svg);
+}
+
+.game_wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    margin: 0 auto 10px;
+    max-width: 1000px;
+}
+
+.game_sentence {
+    min-height: 50px;
+    margin-bottom: 5px;
+}
+
+.game_settings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.game_speaker{
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    background-image: url(../assets/speaker.svg);
+    transition: 0.3s;
+}
+
+.game_container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 410px;
+}
+
+.game_board {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color:antiquewhite;
+}
+
+.game_words {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+.take_puzzles {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+    margin-bottom: 10px;
+}
+
+.btn_dont_know {
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.game_numbering {
+    margin-right: 10px;
+    width: 40px;
+}
+
+.game_numbering_item {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 38px;
+    height: 38px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #09d3ac;
+    margin-bottom: 1px;
+}
+
+.drag_word {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    flex-grow: 1;
+    height: 100%;
+    color: #fff;
+    background-color: #37393d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.drag_word:not(:first-child):before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    left: -10px;
+    border-radius: 40%;
+    z-index: 1;
+}
+
+.drag_word:not(:first-child):before {
+    background-color: antiquewhite;
+}
+
+.drag_word:not(:last-child):after {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    right: -10px;
+    border-radius: 40%;
+    z-index: 2;
+}
+
+.drag_word:not(:last-child):after {
+    background-color: #37393d;
+}
+
+.drag_word+.drag_word {
+    margin-left: 5px;
+}
+
+.display_none {
+    display: none;
+}
+
+.vis_hidden {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 702px) {
+    .menu_wrapper {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    .menu_wrapper>div {
+        margin-bottom: 15px;
+    }
+    .info_screen {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .drag_word {
+        font-size: 12px;
+    }
+    .drag_word>span  {
+        z-index: 10;
+        margin-left: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 565px) {
+    .drag_word  {
+        font-size: 8px;
+    }
+    .drag_word>span  {
+        margin-left: 8px;
+    }
+    .game_numbering {
+        display: none;
+    }
+    .take_puzzles {
+        margin-left: 0px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .drag_word  {
+        font-size: 7px;
+    }
+    .drag_word>span  {
+        margin-left: 5px;
+    }
+}
+
+
+.info_screen {
+    position: absolute;
+    top: 40%;
+    left: 10vw;
+    right: 10vw;
+}
+
+.github_ico {
+    display: inline-block;
+    width: 35px;
+    height: 40px;
+    background-image: url(../assets/github_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.github_link {
+    color: blue;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
